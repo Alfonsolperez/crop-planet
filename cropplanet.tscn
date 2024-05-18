@@ -12,7 +12,7 @@
 [ext_resource type="Script" path="res://Score.gd" id="9_e8vua"]
 [ext_resource type="Script" path="res://animalskilled.gd" id="10_i7ia0"]
 [ext_resource type="Script" path="res://Cloud.gd" id="11_00ysf"]
-[ext_resource type="Texture2D" uid="uid://i4vmvc4q8whn" path="res://cloud.png" id="11_3hpdo"]
+[ext_resource type="Texture2D" uid="uid://i4vmvc4q8whn" path="res://assets/cloud.png" id="11_3hpdo"]
 [ext_resource type="Texture2D" uid="uid://dbjgeunwulkd" path="res://assets/cloud_rain_sprite.png" id="11_8qklr"]
 [ext_resource type="Texture2D" uid="uid://l3hjiqc4rh8q" path="res://SpaceGoat.png" id="12_4mfbp"]
 [ext_resource type="Script" path="res://SpaceGoat.gd" id="13_g10yg"]
@@ -647,7 +647,7 @@ frame_progress = 0.755472
 
 [node name="TentativeBg" type="Sprite2D" parent="."]
 z_index = -2
-position = Vector2(575, 323)
+position = Vector2(577, 323)
 rotation = 1.5708
 scale = Vector2(0.595, 0.6)
 texture = ExtResource("16_yk6i5")
