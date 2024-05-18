@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://l3hjiqc4rh8q"
-path="res://.godot/imported/SpaceGoat.png-c2b73b7719b6c62d47c09fffdd86e368.ctex"
+path="res://.godot/imported/SpaceGoat.png-499dff451ccab247481343bf5f687009.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SpaceGoat.png"
-dest_files=["res://.godot/imported/SpaceGoat.png-c2b73b7719b6c62d47c09fffdd86e368.ctex"]
+source_file="res://assets/SpaceGoat.png"
+dest_files=["res://.godot/imported/SpaceGoat.png-499dff451ccab247481343bf5f687009.ctex"]
 
 [params]
 

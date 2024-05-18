@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfee0mvq2un60"
-path="res://.godot/imported/PlantGrape.png-69085fe481ca60bf382272721f92f82f.ctex"
+uid="uid://jrtjv7snjpyy"
+path="res://.godot/imported/tomato_idle_sprite.png-d443f271ddc3854201d5bac0c62b24c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PlantGrape.png"
-dest_files=["res://.godot/imported/PlantGrape.png-69085fe481ca60bf382272721f92f82f.ctex"]
+source_file="res://assets/tomato_idle_sprite.png"
+dest_files=["res://.godot/imported/tomato_idle_sprite.png-d443f271ddc3854201d5bac0c62b24c9.ctex"]
 
 [params]
 

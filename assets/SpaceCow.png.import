@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpc08jpuu73mq"
-path="res://.godot/imported/PlantRice.png-92078263484d6145973af88c7c8442ad.ctex"
+uid="uid://bh8vjhm8g1vgv"
+path="res://.godot/imported/SpaceCow.png-daa7f6ed5521a7bc47b7f192239b8c77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PlantRice.png"
-dest_files=["res://.godot/imported/PlantRice.png-92078263484d6145973af88c7c8442ad.ctex"]
+source_file="res://assets/SpaceCow.png"
+dest_files=["res://.godot/imported/SpaceCow.png-daa7f6ed5521a7bc47b7f192239b8c77.ctex"]
 
 [params]
 

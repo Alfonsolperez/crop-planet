@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://se6gvsjmf2y6"
-path="res://.godot/imported/corn_idle_sprite.png-4a4dcec7196010850830b9a13e41ec0b.ctex"
+uid="uid://dpc08jpuu73mq"
+path="res://.godot/imported/PlantRice.png-e0b82175333af7fc4857da46290d615e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://corn_idle_sprite.png"
-dest_files=["res://.godot/imported/corn_idle_sprite.png-4a4dcec7196010850830b9a13e41ec0b.ctex"]
+source_file="res://assets/PlantRice.png"
+dest_files=["res://.godot/imported/PlantRice.png-e0b82175333af7fc4857da46290d615e.ctex"]
 
 [params]
 

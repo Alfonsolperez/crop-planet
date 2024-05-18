@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://f58yg3g12nl8"
-path="res://.godot/imported/PlantTomato.png-fc1d153d17b5db97e37df4e99cfd3664.ctex"
+uid="uid://se6gvsjmf2y6"
+path="res://.godot/imported/corn_idle_sprite.png-cee6ff0353f4757703913128096d35fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PlantTomato.png"
-dest_files=["res://.godot/imported/PlantTomato.png-fc1d153d17b5db97e37df4e99cfd3664.ctex"]
+source_file="res://assets/corn_idle_sprite.png"
+dest_files=["res://.godot/imported/corn_idle_sprite.png-cee6ff0353f4757703913128096d35fb.ctex"]
 
 [params]
 

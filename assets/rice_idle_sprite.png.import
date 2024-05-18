@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0cxbhjm8rfsi"
-path="res://.godot/imported/TENTATIVE bg.png-dbf6b14dd2e26b69c348bb45cff0b38d.ctex"
+uid="uid://dxe5rogaspy87"
+path="res://.godot/imported/rice_idle_sprite.png-be6ffb232996bfb62adf31d9dfc26257.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TENTATIVE bg.png"
-dest_files=["res://.godot/imported/TENTATIVE bg.png-dbf6b14dd2e26b69c348bb45cff0b38d.ctex"]
+source_file="res://assets/rice_idle_sprite.png"
+dest_files=["res://.godot/imported/rice_idle_sprite.png-be6ffb232996bfb62adf31d9dfc26257.ctex"]
 
 [params]
 

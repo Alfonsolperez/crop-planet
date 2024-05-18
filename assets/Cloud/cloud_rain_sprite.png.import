@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dff0jxpnyobae"
-path="res://.godot/imported/eggplant_idle_sprite.png-bb657087569e3dad116c41a75f52b6f2.ctex"
+uid="uid://dbjgeunwulkd"
+path="res://.godot/imported/cloud_rain_sprite.png-5844d391e7b6a7b19db2bbcda8d262d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://eggplant_idle_sprite.png"
-dest_files=["res://.godot/imported/eggplant_idle_sprite.png-bb657087569e3dad116c41a75f52b6f2.ctex"]
+source_file="res://assets/Cloud/cloud_rain_sprite.png"
+dest_files=["res://.godot/imported/cloud_rain_sprite.png-5844d391e7b6a7b19db2bbcda8d262d9.ctex"]
 
 [params]
 

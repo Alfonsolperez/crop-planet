@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbjgeunwulkd"
-path="res://.godot/imported/cloud_rain_sprite.png-58300d5a868aedeaf68e796d749a953b.ctex"
+uid="uid://f58yg3g12nl8"
+path="res://.godot/imported/PlantTomato.png-cf6f250bee26a3e8edd00e34aec952ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cloud_rain_sprite.png"
-dest_files=["res://.godot/imported/cloud_rain_sprite.png-58300d5a868aedeaf68e796d749a953b.ctex"]
+source_file="res://assets/PlantTomato.png"
+dest_files=["res://.godot/imported/PlantTomato.png-cf6f250bee26a3e8edd00e34aec952ca.ctex"]
 
 [params]
 
