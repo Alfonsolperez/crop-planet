@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://dvc5ttfpotngu"]
+[gd_scene load_steps=63 format=3 uid="uid://dvc5ttfpotngu"]
 
 [ext_resource type="Script" path="res://Global.gd" id="1_k5ogr"]
 [ext_resource type="Texture2D" uid="uid://doy3llhj3xame" path="res://earth.svg" id="4_rv3k1"]
@@ -15,6 +15,7 @@
 [ext_resource type="Script" path="res://SpaceGoat.gd" id="13_g10yg"]
 [ext_resource type="Texture2D" uid="uid://cxs0ommtndij3" path="res://assets/spacegoat_windup_sprite.png" id="13_xhobo"]
 [ext_resource type="Texture2D" uid="uid://bjugkhf1xofuo" path="res://assets/spacegoat_charge_sprite.png" id="14_6gle7"]
+[ext_resource type="Texture2D" uid="uid://0cxbhjm8rfsi" path="res://TENTATIVE bg.png" id="16_yk6i5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p8ayo"]
 size = Vector2(49.5397, 26.0674)
@@ -412,6 +413,13 @@ scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_hm0um")
 autoplay = "default"
 frame_progress = 0.755472
+
+[node name="TentativeBg" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(577.712, 322.87)
+rotation = 1.5708
+scale = Vector2(0.595, 0.6)
+texture = ExtResource("16_yk6i5")
 
 [connection signal="area_entered" from="SpaceCow/Area2D" to="SpaceCow" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="SpaceGoat/Area2D" to="SpaceGoat" method="_on_area_2d_area_entered"]
