@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mxgyynx0ymuw"
-path="res://.godot/imported/PlantCorn.png-34022421c9be11b7b9eb0b4bb68d5b4e.ctex"
+uid="uid://doy3llhj3xame"
+path="res://.godot/imported/earth.svg-6a985aed796f66c6cfb8bc6868948aa7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PlantCorn.png"
-dest_files=["res://.godot/imported/PlantCorn.png-34022421c9be11b7b9eb0b4bb68d5b4e.ctex"]
+source_file="res://assets/earth.svg"
+dest_files=["res://.godot/imported/earth.svg-6a985aed796f66c6cfb8bc6868948aa7.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

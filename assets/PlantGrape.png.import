@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doy3llhj3xame"
-path="res://.godot/imported/earth.svg-2c27e2d99c118ed861ed15f5135f72cc.ctex"
+uid="uid://bfee0mvq2un60"
+path="res://.godot/imported/PlantGrape.png-cbb17c6cb3390372ed5ca095575e8e42.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://earth.svg"
-dest_files=["res://.godot/imported/earth.svg-2c27e2d99c118ed861ed15f5135f72cc.ctex"]
+source_file="res://assets/PlantGrape.png"
+dest_files=["res://.godot/imported/PlantGrape.png-cbb17c6cb3390372ed5ca095575e8e42.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
