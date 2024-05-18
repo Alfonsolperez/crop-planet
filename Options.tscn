@@ -1,0 +1,86 @@
+[gd_scene load_steps=11 format=3 uid="uid://el6jsmmpibeo"]
+
+[ext_resource type="Script" path="res://Options.gd" id="1_06aw2"]
+[ext_resource type="Texture2D" uid="uid://0cxbhjm8rfsi" path="res://assets/TENTATIVE bg.png" id="1_aq4ia"]
+[ext_resource type="Texture2D" uid="uid://dxe5rogaspy87" path="res://assets/rice_idle_sprite.png" id="2_su0wn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvy0n"]
+atlas = ExtResource("2_su0wn")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxxaf"]
+atlas = ExtResource("2_su0wn")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17w5m"]
+atlas = ExtResource("2_su0wn")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7a27a"]
+atlas = ExtResource("2_su0wn")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_032a2"]
+atlas = ExtResource("2_su0wn")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elvpw"]
+atlas = ExtResource("2_su0wn")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2d158"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvy0n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pxxaf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_17w5m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7a27a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_032a2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elvpw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_06aw2")
+
+[node name="TentativeBg" type="Sprite2D" parent="."]
+position = Vector2(579.849, 327.526)
+rotation = 1.5708
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_aq4ia")
+
+[node name="Rice" type="AnimatedSprite2D" parent="."]
+position = Vector2(615, 316)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_2d158")
+autoplay = "default"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 483.0
+offset_right = 736.0
+offset_bottom = 491.0
+text = "GO BACK"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
