@@ -1,7 +1,6 @@
-[gd_scene load_steps=95 format=3 uid="uid://dvc5ttfpotngu"]
+[gd_scene load_steps=105 format=3 uid="uid://dvc5ttfpotngu"]
 
 [ext_resource type="Script" path="res://Global.gd" id="1_k5ogr"]
-[ext_resource type="Texture2D" uid="uid://doy3llhj3xame" path="res://assets/earth.svg" id="4_rv3k1"]
 [ext_resource type="Script" path="res://Earth.gd" id="5_cexcv"]
 [ext_resource type="Texture2D" uid="uid://dff0jxpnyobae" path="res://assets/eggplant_idle_sprite.png" id="5_qknhu"]
 [ext_resource type="Texture2D" uid="uid://bh8vjhm8g1vgv" path="res://assets/SpaceCow.png" id="6_3n254"]
@@ -9,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://jrtjv7snjpyy" path="res://assets/tomato_idle_sprite.png" id="7_bjjeb"]
 [ext_resource type="Script" path="res://SpaceCow.gd" id="7_d783q"]
 [ext_resource type="Texture2D" uid="uid://dpma85xrbwydk" path="res://assets/spacecow_sprite.png" id="8_2d5no"]
+[ext_resource type="Texture2D" uid="uid://dqfdwbdxf2i3k" path="res://assets/reverseearth_sprite (1).png" id="8_pay5u"]
 [ext_resource type="Script" path="res://Score.gd" id="9_e8vua"]
 [ext_resource type="Script" path="res://animalskilled.gd" id="10_i7ia0"]
 [ext_resource type="Script" path="res://Cloud.gd" id="11_00ysf"]
@@ -20,6 +20,78 @@
 [ext_resource type="Texture2D" uid="uid://bjugkhf1xofuo" path="res://assets/spacegoat_charge_sprite.png" id="14_6gle7"]
 [ext_resource type="Texture2D" uid="uid://0cxbhjm8rfsi" path="res://assets/TENTATIVE bg.png" id="16_yk6i5"]
 [ext_resource type="Texture2D" uid="uid://se6gvsjmf2y6" path="res://assets/corn_idle_sprite.png" id="18_pjr3y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcpoo"]
+atlas = ExtResource("8_pay5u")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ju8ti"]
+atlas = ExtResource("8_pay5u")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qblpd"]
+atlas = ExtResource("8_pay5u")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1qa7"]
+atlas = ExtResource("8_pay5u")
+region = Rect2(768, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uh0yx"]
+atlas = ExtResource("8_pay5u")
+region = Rect2(1024, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1e0jb"]
+atlas = ExtResource("8_pay5u")
+region = Rect2(1280, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51shi"]
+atlas = ExtResource("8_pay5u")
+region = Rect2(1536, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hnw6n"]
+atlas = ExtResource("8_pay5u")
+region = Rect2(1792, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ekob"]
+atlas = ExtResource("8_pay5u")
+region = Rect2(2048, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vygby"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qcpoo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ju8ti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qblpd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1qa7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uh0yx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1e0jb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_51shi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hnw6n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ekob")
+}],
+"loop": true,
+"name": &"EarthRotate",
+"speed": 8.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n746j"]
 atlas = ExtResource("18_pjr3y")
@@ -537,37 +609,39 @@ animations = [{
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_k5ogr")
 
-[node name="Earth" type="Sprite2D" parent="."]
+[node name="Earth" type="AnimatedSprite2D" parent="."]
 z_index = 2
-position = Vector2(600, 298)
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("4_rv3k1")
+position = Vector2(577, 323)
+scale = Vector2(0.625391, 0.674451)
+sprite_frames = SubResource("SpriteFrames_vygby")
+animation = &"EarthRotate"
+autoplay = "EarthRotate"
 script = ExtResource("5_cexcv")
 
 [node name="Corn" type="AnimatedSprite2D" parent="Earth"]
-position = Vector2(733.333, -6.66671)
+position = Vector2(183.885, -1.48275)
 rotation = 1.5708
-scale = Vector2(6.66667, 6.66667)
+scale = Vector2(3.35776, 3.35776)
 sprite_frames = SubResource("SpriteFrames_w5m7m")
 autoplay = "default"
 
 [node name="Grapes" type="AnimatedSprite2D" parent="Earth"]
-position = Vector2(6.66683, -733.333)
-scale = Vector2(6, 6)
+position = Vector2(-1.59904, -171.992)
+scale = Vector2(3.44972, 3.44972)
 sprite_frames = SubResource("SpriteFrames_ojb1p")
 autoplay = "default"
 
 [node name="Rice" type="AnimatedSprite2D" parent="Earth"]
-position = Vector2(-706.667, 6.66666)
+position = Vector2(-161.499, -2.96543)
 rotation = -1.5708
-scale = Vector2(6, 6)
+scale = Vector2(3.4333, 3.4333)
 sprite_frames = SubResource("SpriteFrames_it57g")
 autoplay = "default"
 
 [node name="Tomato" type="AnimatedSprite2D" parent="Earth"]
-position = Vector2(0, 740)
+position = Vector2(-3.19796, 163.096)
 rotation = -3.14159
-scale = Vector2(6, 6)
+scale = Vector2(2.85906, 2.85906)
 sprite_frames = SubResource("SpriteFrames_ohjef")
 autoplay = "default"
 
