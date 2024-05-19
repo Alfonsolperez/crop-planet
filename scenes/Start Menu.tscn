@@ -53,7 +53,7 @@ region = Rect2(1792, 0, 256, 256)
 atlas = ExtResource("5_if5ob")
 region = Rect2(2048, 0, 256, 256)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_mgsis"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_n2yib"]
 resource_local_to_scene = true
 animations = [{
 "frames": [{
@@ -117,7 +117,7 @@ region = Rect2(160, 0, 32, 32)
 atlas = ExtResource("7_00ve0")
 region = Rect2(192, 0, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_c7fic"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_15jup"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -170,7 +170,7 @@ region = Rect2(128, 0, 32, 32)
 atlas = ExtResource("8_egk6a")
 region = Rect2(160, 0, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_706fq"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_s27tx"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -220,7 +220,7 @@ region = Rect2(128, 0, 32, 32)
 atlas = ExtResource("9_inmy8")
 region = Rect2(160, 0, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_pywn3"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_mpu5u"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -266,7 +266,7 @@ region = Rect2(96, 0, 32, 32)
 atlas = ExtResource("10_f2e8w")
 region = Rect2(128, 0, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_r7k86"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_2je08"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -345,38 +345,53 @@ label_settings = SubResource("LabelSettings_tfyfl")
 
 [node name="Earth" type="AnimatedSprite2D" parent="."]
 z_index = 2
-position = Vector2(757, 328)
-scale = Vector2(1.1251, 1.21336)
-sprite_frames = SubResource("SpriteFrames_mgsis")
+position = Vector2(781, 318)
+scale = Vector2(1.2582, 1.35571)
+sprite_frames = SubResource("SpriteFrames_n2yib")
 animation = &"EarthRotate"
 autoplay = "EarthRotate"
 script = ExtResource("6_iexlv")
 
 [node name="Corn" type="AnimatedSprite2D" parent="Earth"]
-position = Vector2(183.885, -1.48275)
-rotation = 1.5708
+position = Vector2(92.5, -143.852)
+rotation = 0.471239
 scale = Vector2(3.35776, 3.35776)
-sprite_frames = SubResource("SpriteFrames_c7fic")
+sprite_frames = SubResource("SpriteFrames_15jup")
+autoplay = "default"
+
+[node name="Grapes2" type="AnimatedSprite2D" parent="Earth"]
+position = Vector2(185, 4.46057)
+rotation = 1.5708
+scale = Vector2(3.45, 3.45)
+sprite_frames = SubResource("SpriteFrames_s27tx")
 autoplay = "default"
 
 [node name="Grapes" type="AnimatedSprite2D" parent="Earth"]
-position = Vector2(-1.59904, -171.992)
+position = Vector2(-85.0002, -148.492)
+rotation = -0.471239
 scale = Vector2(3.44972, 3.44972)
-sprite_frames = SubResource("SpriteFrames_706fq")
+sprite_frames = SubResource("SpriteFrames_s27tx")
+autoplay = "default"
+
+[node name="Rice2" type="AnimatedSprite2D" parent="Earth"]
+position = Vector2(92.5, 125.29)
+rotation = -3.61283
+scale = Vector2(3.433, 3.433)
+sprite_frames = SubResource("SpriteFrames_mpu5u")
 autoplay = "default"
 
 [node name="Rice" type="AnimatedSprite2D" parent="Earth"]
-position = Vector2(-161.499, -2.96543)
+position = Vector2(-167.5, 4.6404)
 rotation = -1.5708
 scale = Vector2(3.4333, 3.4333)
-sprite_frames = SubResource("SpriteFrames_pywn3")
+sprite_frames = SubResource("SpriteFrames_mpu5u")
 autoplay = "default"
 
 [node name="Tomato" type="AnimatedSprite2D" parent="Earth"]
-position = Vector2(-3.19796, 163.096)
-rotation = -3.14159
+position = Vector2(-87.5, 141.531)
+rotation = 3.61283
 scale = Vector2(2.85906, 2.85906)
-sprite_frames = SubResource("SpriteFrames_r7k86")
+sprite_frames = SubResource("SpriteFrames_2je08")
 autoplay = "default"
 
 [connection signal="pressed" from="BtnContainer/StartBtn" to="." method="_on_start_btn_pressed"]
