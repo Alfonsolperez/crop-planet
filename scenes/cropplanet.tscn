@@ -1,4 +1,4 @@
-[gd_scene load_steps=118 format=3 uid="uid://dvc5ttfpotngu"]
+[gd_scene load_steps=117 format=3 uid="uid://dvc5ttfpotngu"]
 
 [ext_resource type="Script" path="res://scripts/Global.gd" id="1_uw66j"]
 [ext_resource type="Texture2D" uid="uid://dqfdwbdxf2i3k" path="res://assets/sprites/reverseearth_sprite (1).png" id="2_hr7hh"]
@@ -13,7 +13,6 @@
 [ext_resource type="FontFile" uid="uid://by2tsy20lvxbi" path="res://assets/fonts/PixelOperator8.ttf" id="11_472r7"]
 [ext_resource type="Script" path="res://scripts/animalskilled.gd" id="12_oxiik"]
 [ext_resource type="Script" path="res://scripts/Score.gd" id="13_qxxlw"]
-[ext_resource type="Texture2D" uid="uid://i4vmvc4q8whn" path="res://assets/sprites/Cloud/cloud.png" id="14_518m0"]
 [ext_resource type="Script" path="res://scripts/Cloud.gd" id="15_dkubf"]
 [ext_resource type="Texture2D" uid="uid://dbjgeunwulkd" path="res://assets/sprites/Cloud/cloud_rain_sprite.png" id="16_0gucr"]
 [ext_resource type="Texture2D" uid="uid://l3hjiqc4rh8q" path="res://assets/sprites/SpaceGoat.png" id="17_buyra"]
@@ -436,7 +435,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_snuw1"]
-size = Vector2(7147.46, 2586.15)
+size = Vector2(2674.46, 755.259)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gl8ou"]
 size = Vector2(188, 100)
@@ -680,7 +679,7 @@ script = ExtResource("1_uw66j")
 [node name="Earth" type="AnimatedSprite2D" parent="."]
 z_index = 2
 position = Vector2(577, 323)
-scale = Vector2(0.625391, 0.674451)
+scale = Vector2(0.4, 0.431)
 sprite_frames = SubResource("SpriteFrames_vygby")
 animation = &"EarthRotate"
 autoplay = "EarthRotate"
@@ -714,8 +713,7 @@ sprite_frames = SubResource("SpriteFrames_ohjef")
 autoplay = "default"
 
 [node name="SpaceCow" type="Sprite2D" parent="."]
-position = Vector2(311, 458)
-scale = Vector2(1.5, 1.5)
+position = Vector2(300, 458)
 texture = ExtResource("8_pnhi6")
 script = ExtResource("9_t7hb1")
 
@@ -755,14 +753,13 @@ process_callback = 0
 autostart = true
 
 [node name="Cloud" type="Sprite2D" parent="."]
-position = Vector2(403.7, 147.923)
+position = Vector2(406, 150)
 scale = Vector2(0.0214062, 0.0218472)
-texture = ExtResource("14_518m0")
 script = ExtResource("15_dkubf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Cloud"]
-position = Vector2(-172.846, 7556.01)
-scale = Vector2(75, 75)
+position = Vector2(46.7154, 8696.77)
+scale = Vector2(30, 26.97)
 sprite_frames = SubResource("SpriteFrames_thf7g")
 autoplay = "default"
 frame_progress = 0.579102
@@ -770,12 +767,13 @@ frame_progress = 0.579102
 [node name="Area2D" type="Area2D" parent="Cloud"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cloud/Area2D"]
-position = Vector2(130.807, 175.194)
+position = Vector2(140.146, 6179.28)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_snuw1")
 
 [node name="SpaceGoat" type="Sprite2D" parent="."]
 position = Vector2(117, 569)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("17_buyra")
 script = ExtResource("18_37ob7")
 
@@ -794,9 +792,9 @@ frame_progress = 0.755472
 
 [node name="TentativeBg" type="Sprite2D" parent="."]
 z_index = -2
-position = Vector2(577, 323)
+position = Vector2(579, 327)
 rotation = 1.5708
-scale = Vector2(0.595, 0.6)
+scale = Vector2(0.613973, 0.60928)
 texture = ExtResource("21_21tf4")
 
 [node name="PowerupBlock" type="Sprite2D" parent="."]

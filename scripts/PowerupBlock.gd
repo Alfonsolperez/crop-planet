@@ -1,17 +1,11 @@
 extends Sprite2D
 
 var speed: float = 200.0
-
 var amplitude: float = 150.0
-
 var frequency: float = 0.5
-
 var is_moving: bool = false
-
 var screen_width: float
-
 var start_y: float
-
 var time_passed: float = 0.0
 
 func _ready():
@@ -19,7 +13,6 @@ func _ready():
 	hide()
 
 func _process(delta: float):
-	print(Global.animalskilled )
 	if Global.animalskilled  % 15 == 0 and Global.animalskilled  != 0 and not is_moving:
 		start_moving()
 	
