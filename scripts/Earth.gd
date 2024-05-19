@@ -1,14 +1,24 @@
 extends AnimatedSprite2D
 
+@onready var healthbar = $Healthbar
+var health = 100
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	healthbar.init_health(health)
 
-# Called every frame. Alternatively, you can use _physics_process for physics-related updates.
 func _process(delta):
-	pass
+	if health <= 0:
+		queue_free() #ded
 
 func center_object():
 	var viewport_size = get_viewport_rect().size
 	self.position = viewport_size / 2
+
+
+func _on_area_2d_area_entered(area):
+	if area.is_in_group("cow"):
+		health -= 20
+	else:
+		health -= 10
+	
+	healthbar.set_health(health)

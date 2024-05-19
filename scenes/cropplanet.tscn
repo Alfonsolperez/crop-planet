@@ -1,4 +1,4 @@
-[gd_scene load_steps=127 format=3 uid="uid://dvc5ttfpotngu"]
+[gd_scene load_steps=116 format=3 uid="uid://dvc5ttfpotngu"]
 
 [ext_resource type="Script" path="res://scripts/Global.gd" id="1_uw66j"]
 [ext_resource type="Texture2D" uid="uid://dqfdwbdxf2i3k" path="res://assets/sprites/reverseearth_sprite (1).png" id="2_hr7hh"]
@@ -15,8 +15,7 @@
 [ext_resource type="FontFile" uid="uid://by2tsy20lvxbi" path="res://assets/fonts/PixelOperator8.ttf" id="11_472r7"]
 [ext_resource type="Script" path="res://scripts/animalskilled.gd" id="12_oxiik"]
 [ext_resource type="Script" path="res://scripts/Score.gd" id="13_qxxlw"]
-[ext_resource type="Script" path="res://scripts/Cloud.gd" id="15_dkubf"]
-[ext_resource type="Texture2D" uid="uid://dbjgeunwulkd" path="res://assets/sprites/Cloud/cloud_rain_sprite.png" id="16_0gucr"]
+[ext_resource type="PackedScene" uid="uid://cvio3cxme5rad" path="res://scenes/cloud.tscn" id="16_4uk8p"]
 [ext_resource type="Texture2D" uid="uid://l3hjiqc4rh8q" path="res://assets/sprites/SpaceGoat.png" id="17_buyra"]
 [ext_resource type="Script" path="res://scripts/SpaceGoat.gd" id="18_37ob7"]
 [ext_resource type="Texture2D" uid="uid://cxs0ommtndij3" path="res://assets/sprites/spacegoat_windup_sprite.png" id="19_jp7sh"]
@@ -350,6 +349,9 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_suhml"]
+radius = 116.27
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p8ayo"]
 size = Vector2(49.5397, 26.0674)
 
@@ -416,80 +418,6 @@ animations = [{
 "name": &"default",
 "speed": 10.0
 }]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vg4lk"]
-atlas = ExtResource("16_0gucr")
-region = Rect2(0, 0, 100, 300)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vrbfu"]
-atlas = ExtResource("16_0gucr")
-region = Rect2(100, 0, 100, 300)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_087sw"]
-atlas = ExtResource("16_0gucr")
-region = Rect2(200, 0, 100, 300)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bftmu"]
-atlas = ExtResource("16_0gucr")
-region = Rect2(300, 0, 100, 300)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_h7651"]
-atlas = ExtResource("16_0gucr")
-region = Rect2(400, 0, 100, 300)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n8fgi"]
-atlas = ExtResource("16_0gucr")
-region = Rect2(500, 0, 100, 300)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7hj3s"]
-atlas = ExtResource("16_0gucr")
-region = Rect2(600, 0, 100, 300)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ojkpl"]
-atlas = ExtResource("16_0gucr")
-region = Rect2(700, 0, 100, 300)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_a8wjv"]
-atlas = ExtResource("16_0gucr")
-region = Rect2(800, 0, 100, 300)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_thf7g"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vg4lk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vrbfu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_087sw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bftmu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_h7651")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n8fgi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7hj3s")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ojkpl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_a8wjv")
-}],
-"loop": true,
-"name": &"default",
-"speed": 10.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_snuw1"]
-size = Vector2(2674.46, 755.259)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gl8ou"]
 size = Vector2(188, 100)
@@ -824,7 +752,7 @@ metadata/_edit_use_anchors_ = true
 shape = SubResource("CircleShape2D_5umw0")
 
 [node name="Tomato" type="AnimatedSprite2D" parent="Earth"]
-position = Vector2(-87.5, 141.531)
+position = Vector2(-85, 136.891)
 rotation = 3.61283
 scale = Vector2(2.85906, 2.85906)
 sprite_frames = SubResource("SpriteFrames_ohjef")
@@ -864,6 +792,17 @@ metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Earth/Grapes/Area2D"]
 shape = SubResource("CircleShape2D_5umw0")
+
+[node name="Healthbar" parent="Earth" instance=ExtResource("9_lwm56")]
+offset_left = -1395.0
+offset_top = 664.0
+offset_right = 1350.0
+offset_bottom = 708.0
+
+[node name="Area2D" type="Area2D" parent="Earth"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Earth/Area2D"]
+shape = SubResource("CircleShape2D_suhml")
 
 [node name="SpaceCow" type="Sprite2D" parent="."]
 position = Vector2(300, 458)
@@ -905,23 +844,7 @@ script = ExtResource("13_qxxlw")
 process_callback = 0
 autostart = true
 
-[node name="Cloud" type="Sprite2D" parent="."]
-position = Vector2(406, 150)
-scale = Vector2(0.0214062, 0.0218472)
-script = ExtResource("15_dkubf")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Cloud"]
-position = Vector2(46.7154, 8696.77)
-scale = Vector2(30, 26.97)
-sprite_frames = SubResource("SpriteFrames_thf7g")
-autoplay = "default"
-frame_progress = 0.579102
-
-[node name="Area2D" type="Area2D" parent="Cloud"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cloud/Area2D"]
-position = Vector2(140.146, 6179.28)
-shape = SubResource("RectangleShape2D_snuw1")
+[node name="Cloud" parent="." instance=ExtResource("16_4uk8p")]
 
 [node name="SpaceGoat" type="Sprite2D" parent="."]
 position = Vector2(117, 569)
@@ -965,6 +888,7 @@ frame_progress = 0.311695
 [connection signal="area_entered" from="Earth/Rice/Area2D" to="Earth/Rice" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Earth/Tomato/Area2D" to="Earth/Tomato" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Earth/Grapes/Area2D" to="Earth/Grapes" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Earth/Area2D" to="Earth" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="SpaceCow/Area2D" to="SpaceCow" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="SpaceGoat/Area2D" to="SpaceGoat" method="_on_area_2d_area_entered"]
 [connection signal="frame_changed" from="SpaceGoat/AnimatedSprite2D" to="SpaceGoat" method="_on_animated_sprite_2d_frame_changed"]

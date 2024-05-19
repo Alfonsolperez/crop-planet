@@ -1,11 +1,10 @@
-[gd_scene load_steps=50 format=3 uid="uid://h3gc7igs350p"]
+[gd_scene load_steps=49 format=3 uid="uid://h3gc7igs350p"]
 
 [ext_resource type="Script" path="res://scripts/Start Menu.gd" id="1_no2bp"]
 [ext_resource type="FontFile" uid="uid://by2tsy20lvxbi" path="res://assets/fonts/PixelOperator8.ttf" id="2_ka8pi"]
 [ext_resource type="Texture2D" uid="uid://0cxbhjm8rfsi" path="res://assets/sprites/TENTATIVE bg.png" id="3_fki30"]
 [ext_resource type="FontFile" uid="uid://c5cix2kyxayuo" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="4_2w3gx"]
 [ext_resource type="Texture2D" uid="uid://dqfdwbdxf2i3k" path="res://assets/sprites/reverseearth_sprite (1).png" id="5_if5ob"]
-[ext_resource type="Script" path="res://scripts/Earth.gd" id="6_iexlv"]
 [ext_resource type="Texture2D" uid="uid://se6gvsjmf2y6" path="res://assets/sprites/corn_idle_sprite.png" id="7_00ve0"]
 [ext_resource type="Texture2D" uid="uid://dff0jxpnyobae" path="res://assets/sprites/eggplant_idle_sprite.png" id="8_egk6a"]
 [ext_resource type="Texture2D" uid="uid://dxe5rogaspy87" path="res://assets/sprites/rice_idle_sprite.png" id="9_inmy8"]
@@ -350,7 +349,6 @@ scale = Vector2(1.2582, 1.35571)
 sprite_frames = SubResource("SpriteFrames_n2yib")
 animation = &"EarthRotate"
 autoplay = "EarthRotate"
-script = ExtResource("6_iexlv")
 
 [node name="Corn" type="AnimatedSprite2D" parent="Earth"]
 position = Vector2(92.5, -143.852)
