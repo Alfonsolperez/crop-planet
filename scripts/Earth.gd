@@ -9,6 +9,7 @@ func _ready():
 func _process(delta):
 	if health <= 0:
 		queue_free() #ded
+		get_tree().change_scene_to_file("res://scenes/Dead.tscn")
 
 func center_object():
 	var viewport_size = get_viewport_rect().size
