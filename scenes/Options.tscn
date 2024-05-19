@@ -1,8 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://el6jsmmpibeo"]
+[gd_scene load_steps=42 format=3 uid="uid://el6jsmmpibeo"]
 
 [ext_resource type="Texture2D" uid="uid://0cxbhjm8rfsi" path="res://assets/sprites/TENTATIVE bg.png" id="1_aq4ia"]
 [ext_resource type="Texture2D" uid="uid://dxe5rogaspy87" path="res://assets/sprites/rice_idle_sprite.png" id="2_su0wn"]
-[ext_resource type="Script" path="res://scripts/Rice.gd" id="3_ybphs"]
+[ext_resource type="FontFile" uid="uid://by2tsy20lvxbi" path="res://assets/fonts/PixelOperator8.ttf" id="2_v5ob3"]
+[ext_resource type="Script" path="res://scripts/VolumeSlider.gd" id="3_aenb4"]
+[ext_resource type="FontFile" uid="uid://c5cix2kyxayuo" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_nmoh4"]
+[ext_resource type="Texture2D" uid="uid://jrtjv7snjpyy" path="res://assets/sprites/tomato_idle_sprite.png" id="6_i5d1h"]
+[ext_resource type="Texture2D" uid="uid://se6gvsjmf2y6" path="res://assets/sprites/corn_idle_sprite.png" id="7_yco7g"]
+[ext_resource type="Texture2D" uid="uid://dff0jxpnyobae" path="res://assets/sprites/eggplant_idle_sprite.png" id="8_k6xe5"]
 
 [sub_resource type="GDScript" id="GDScript_nbg6a"]
 script/source = "extends Control
@@ -20,6 +25,34 @@ func _process(delta):
 func _on_button_pressed():
 	get_tree().change_scene_to_file(\"res://scenes//Start Menu.tscn\")
 "
+
+[sub_resource type="GDScript" id="GDScript_doift"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[sub_resource type="LabelSettings" id="LabelSettings_lxv2n"]
+font = ExtResource("2_v5ob3")
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_egcme"]
+font = ExtResource("3_nmoh4")
+font_size = 37
+shadow_size = 7
+shadow_offset = Vector2(10, 10)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kecu1"]
+font = ExtResource("2_v5ob3")
+font_size = 25
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gvy0n"]
 atlas = ExtResource("2_su0wn")
@@ -45,7 +78,7 @@ region = Rect2(128, 0, 32, 32)
 atlas = ExtResource("2_su0wn")
 region = Rect2(160, 0, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_2d158"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_ei1t7"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -71,19 +104,155 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="GDScript" id="GDScript_doift"]
-script/source = "extends Button
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4yec"]
+atlas = ExtResource("6_i5d1h")
+region = Rect2(0, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_15ls1"]
+atlas = ExtResource("6_i5d1h")
+region = Rect2(32, 0, 32, 32)
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+[sub_resource type="AtlasTexture" id="AtlasTexture_lyonj"]
+atlas = ExtResource("6_i5d1h")
+region = Rect2(64, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydiax"]
+atlas = ExtResource("6_i5d1h")
+region = Rect2(96, 0, 32, 32)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-"
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbruw"]
+atlas = ExtResource("6_i5d1h")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3icgo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4yec")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_15ls1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lyonj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydiax")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbruw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n746j"]
+atlas = ExtResource("7_yco7g")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dey8o"]
+atlas = ExtResource("7_yco7g")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rv04"]
+atlas = ExtResource("7_yco7g")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_el66p"]
+atlas = ExtResource("7_yco7g")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2dx3w"]
+atlas = ExtResource("7_yco7g")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0r7q7"]
+atlas = ExtResource("7_yco7g")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqgsi"]
+atlas = ExtResource("7_yco7g")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ipq60"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n746j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dey8o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rv04")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_el66p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2dx3w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0r7q7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqgsi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6h1in"]
+atlas = ExtResource("8_k6xe5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujasf"]
+atlas = ExtResource("8_k6xe5")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvljk"]
+atlas = ExtResource("8_k6xe5")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pi7cs"]
+atlas = ExtResource("8_k6xe5")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sihig"]
+atlas = ExtResource("8_k6xe5")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ryqpq"]
+atlas = ExtResource("8_k6xe5")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_63fle"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6h1in")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujasf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvljk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pi7cs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sihig")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ryqpq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
 
 [node name="Options" type="Control"]
 layout_mode = 3
@@ -100,13 +269,6 @@ rotation = 1.5708
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_aq4ia")
 
-[node name="Rice" type="AnimatedSprite2D" parent="."]
-position = Vector2(579, 335)
-scale = Vector2(6, 6)
-sprite_frames = SubResource("SpriteFrames_2d158")
-autoplay = "default"
-script = ExtResource("3_ybphs")
-
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
 offset_left = 466.0
@@ -116,4 +278,91 @@ offset_bottom = 531.0
 text = "GO BACK"
 script = SubResource("GDScript_doift")
 
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -527.0
+offset_top = -172.0
+offset_right = 548.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+text = "You are a cloud assigned by God to protect this planet."
+label_settings = SubResource("LabelSettings_lxv2n")
+
+[node name="Label" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "
+CROP PLANET!
+ "
+label_settings = SubResource("LabelSettings_egcme")
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+text = "Fulfill your duty against hordes of cows and rams for as long as you can, and protect crop planet!"
+label_settings = SubResource("LabelSettings_kecu1")
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 55.0
+offset_right = 732.0
+offset_bottom = 109.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "VOLUME"
+label_settings = SubResource("LabelSettings_lxv2n")
+
+[node name="VolumeSlider" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+script = ExtResource("3_aenb4")
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = -16.0
+offset_right = 72.0
+offset_bottom = 24.0
+
+[node name="Rice" type="AnimatedSprite2D" parent="VBoxContainer3"]
+position = Vector2(472, 456)
+scale = Vector2(3.4333, 3.4333)
+sprite_frames = SubResource("SpriteFrames_ei1t7")
+autoplay = "default"
+
+[node name="Tomato" type="AnimatedSprite2D" parent="VBoxContainer3"]
+position = Vector2(616, 448)
+scale = Vector2(2.85906, 2.85906)
+sprite_frames = SubResource("SpriteFrames_3icgo")
+autoplay = "default"
+
+[node name="Corn" type="AnimatedSprite2D" parent="VBoxContainer3"]
+position = Vector2(752, 440)
+scale = Vector2(3.35776, 3.35776)
+sprite_frames = SubResource("SpriteFrames_ipq60")
+autoplay = "default"
+
+[node name="Grapes" type="AnimatedSprite2D" parent="VBoxContainer3"]
+position = Vector2(336, 440)
+scale = Vector2(3.44972, 3.44972)
+sprite_frames = SubResource("SpriteFrames_63fle")
+autoplay = "default"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_exited" from="VBoxContainer/VolumeSlider" to="." method="_on_volume_slider_mouse_exited"]
+[connection signal="mouse_exited" from="VBoxContainer/VolumeSlider" to="VBoxContainer/VolumeSlider" method="_on_mouse_exited"]
+[connection signal="value_changed" from="VBoxContainer/VolumeSlider" to="VBoxContainer/VolumeSlider" method="_on_value_changed"]
