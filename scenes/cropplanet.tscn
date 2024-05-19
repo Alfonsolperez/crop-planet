@@ -686,28 +686,43 @@ autoplay = "EarthRotate"
 script = ExtResource("3_6iumo")
 
 [node name="Corn" type="AnimatedSprite2D" parent="Earth"]
-position = Vector2(183.885, -1.48275)
-rotation = 1.5708
+position = Vector2(92.5, -143.852)
+rotation = 0.471239
 scale = Vector2(3.35776, 3.35776)
 sprite_frames = SubResource("SpriteFrames_w5m7m")
 autoplay = "default"
 
+[node name="Grapes2" type="AnimatedSprite2D" parent="Earth"]
+position = Vector2(185, 4.46057)
+rotation = 1.5708
+scale = Vector2(3.45, 3.45)
+sprite_frames = SubResource("SpriteFrames_ojb1p")
+autoplay = "default"
+
 [node name="Grapes" type="AnimatedSprite2D" parent="Earth"]
-position = Vector2(-1.59904, -171.992)
+position = Vector2(-85.0002, -148.492)
+rotation = -0.471239
 scale = Vector2(3.44972, 3.44972)
 sprite_frames = SubResource("SpriteFrames_ojb1p")
 autoplay = "default"
 
+[node name="Rice2" type="AnimatedSprite2D" parent="Earth"]
+position = Vector2(92.5, 125.29)
+rotation = -3.61283
+scale = Vector2(3.433, 3.433)
+sprite_frames = SubResource("SpriteFrames_it57g")
+autoplay = "default"
+
 [node name="Rice" type="AnimatedSprite2D" parent="Earth"]
-position = Vector2(-161.499, -2.96543)
+position = Vector2(-167.5, 4.6404)
 rotation = -1.5708
 scale = Vector2(3.4333, 3.4333)
 sprite_frames = SubResource("SpriteFrames_it57g")
 autoplay = "default"
 
 [node name="Tomato" type="AnimatedSprite2D" parent="Earth"]
-position = Vector2(-3.19796, 163.096)
-rotation = -3.14159
+position = Vector2(-87.5, 141.531)
+rotation = 3.61283
 scale = Vector2(2.85906, 2.85906)
 sprite_frames = SubResource("SpriteFrames_ohjef")
 autoplay = "default"
@@ -768,7 +783,6 @@ frame_progress = 0.579102
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cloud/Area2D"]
 position = Vector2(140.146, 6179.28)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_snuw1")
 
 [node name="SpaceGoat" type="Sprite2D" parent="."]
