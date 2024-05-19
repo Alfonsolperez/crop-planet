@@ -1,4 +1,4 @@
-[gd_scene load_steps=117 format=3 uid="uid://dvc5ttfpotngu"]
+[gd_scene load_steps=127 format=3 uid="uid://dvc5ttfpotngu"]
 
 [ext_resource type="Script" path="res://scripts/Global.gd" id="1_uw66j"]
 [ext_resource type="Texture2D" uid="uid://dqfdwbdxf2i3k" path="res://assets/sprites/reverseearth_sprite (1).png" id="2_hr7hh"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://dxe5rogaspy87" path="res://assets/sprites/rice_idle_sprite.png" id="6_mp1hm"]
 [ext_resource type="Texture2D" uid="uid://jrtjv7snjpyy" path="res://assets/sprites/tomato_idle_sprite.png" id="7_khpjf"]
 [ext_resource type="Texture2D" uid="uid://bh8vjhm8g1vgv" path="res://assets/sprites/SpaceCow.png" id="8_pnhi6"]
+[ext_resource type="Script" path="res://crops.gd" id="8_qn6x1"]
+[ext_resource type="PackedScene" uid="uid://gap60trgfhpe" path="res://scenes/Healthbar.tscn" id="9_lwm56"]
 [ext_resource type="Script" path="res://scripts/SpaceCow.gd" id="9_t7hb1"]
 [ext_resource type="Texture2D" uid="uid://dpma85xrbwydk" path="res://assets/sprites/spacecow_sprite.png" id="10_cl4xv"]
 [ext_resource type="FontFile" uid="uid://by2tsy20lvxbi" path="res://assets/fonts/PixelOperator8.ttf" id="11_472r7"]
@@ -153,6 +155,8 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_5umw0"]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_6h1in"]
 atlas = ExtResource("5_ixna8")
 region = Rect2(0, 0, 32, 32)
@@ -290,6 +294,56 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_sbruw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vk4k"]
+atlas = ExtResource("5_ixna8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7oon"]
+atlas = ExtResource("5_ixna8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pex0o"]
+atlas = ExtResource("5_ixna8")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55sxw"]
+atlas = ExtResource("5_ixna8")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dpye"]
+atlas = ExtResource("5_ixna8")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fyrhg"]
+atlas = ExtResource("5_ixna8")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_efy8l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vk4k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7oon")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pex0o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55sxw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8dpye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fyrhg")
 }],
 "loop": true,
 "name": &"default",
@@ -691,6 +745,20 @@ rotation = 0.471239
 scale = Vector2(3.35776, 3.35776)
 sprite_frames = SubResource("SpriteFrames_w5m7m")
 autoplay = "default"
+script = ExtResource("8_qn6x1")
+
+[node name="Healthbar" parent="Earth/Corn" instance=ExtResource("9_lwm56")]
+z_index = 5
+offset_left = -12.9784
+offset_top = -21.9197
+offset_right = 15.0216
+offset_bottom = -17.9197
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="Earth/Corn"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Earth/Corn/Area2D"]
+shape = SubResource("CircleShape2D_5umw0")
 
 [node name="Grapes2" type="AnimatedSprite2D" parent="Earth"]
 position = Vector2(185, 4.46057)
@@ -698,13 +766,20 @@ rotation = 1.5708
 scale = Vector2(3.45, 3.45)
 sprite_frames = SubResource("SpriteFrames_ojb1p")
 autoplay = "default"
+script = ExtResource("8_qn6x1")
 
-[node name="Grapes" type="AnimatedSprite2D" parent="Earth"]
-position = Vector2(-85.0002, -148.492)
-rotation = -0.471239
-scale = Vector2(3.44972, 3.44972)
-sprite_frames = SubResource("SpriteFrames_ojb1p")
-autoplay = "default"
+[node name="Healthbar" parent="Earth/Grapes2" instance=ExtResource("9_lwm56")]
+z_index = 5
+offset_left = -12.9784
+offset_top = -21.9197
+offset_right = 15.0216
+offset_bottom = -17.9197
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="Earth/Grapes2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Earth/Grapes2/Area2D"]
+shape = SubResource("CircleShape2D_5umw0")
 
 [node name="Rice2" type="AnimatedSprite2D" parent="Earth"]
 position = Vector2(92.5, 125.29)
@@ -712,6 +787,20 @@ rotation = -3.61283
 scale = Vector2(3.433, 3.433)
 sprite_frames = SubResource("SpriteFrames_it57g")
 autoplay = "default"
+script = ExtResource("8_qn6x1")
+
+[node name="Healthbar" parent="Earth/Rice2" instance=ExtResource("9_lwm56")]
+z_index = 5
+offset_left = -12.9784
+offset_top = -21.9197
+offset_right = 15.0216
+offset_bottom = -17.9197
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="Earth/Rice2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Earth/Rice2/Area2D"]
+shape = SubResource("CircleShape2D_5umw0")
 
 [node name="Rice" type="AnimatedSprite2D" parent="Earth"]
 position = Vector2(-167.5, 4.6404)
@@ -719,6 +808,20 @@ rotation = -1.5708
 scale = Vector2(3.4333, 3.4333)
 sprite_frames = SubResource("SpriteFrames_it57g")
 autoplay = "default"
+script = ExtResource("8_qn6x1")
+
+[node name="Healthbar" parent="Earth/Rice" instance=ExtResource("9_lwm56")]
+z_index = 5
+offset_left = -12.9784
+offset_top = -21.9197
+offset_right = 15.0216
+offset_bottom = -17.9197
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="Earth/Rice"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Earth/Rice/Area2D"]
+shape = SubResource("CircleShape2D_5umw0")
 
 [node name="Tomato" type="AnimatedSprite2D" parent="Earth"]
 position = Vector2(-87.5, 141.531)
@@ -726,6 +829,41 @@ rotation = 3.61283
 scale = Vector2(2.85906, 2.85906)
 sprite_frames = SubResource("SpriteFrames_ohjef")
 autoplay = "default"
+script = ExtResource("8_qn6x1")
+
+[node name="Healthbar" parent="Earth/Tomato" instance=ExtResource("9_lwm56")]
+z_index = 5
+offset_left = -12.9784
+offset_top = -21.9197
+offset_right = 15.0216
+offset_bottom = -17.9197
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="Earth/Tomato"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Earth/Tomato/Area2D"]
+shape = SubResource("CircleShape2D_5umw0")
+
+[node name="Grapes" type="AnimatedSprite2D" parent="Earth"]
+position = Vector2(-92.5001, -143.852)
+rotation = -0.492463
+scale = Vector2(3.44972, 3.44972)
+sprite_frames = SubResource("SpriteFrames_efy8l")
+autoplay = "default"
+script = ExtResource("8_qn6x1")
+
+[node name="Healthbar" parent="Earth/Grapes" instance=ExtResource("9_lwm56")]
+z_index = 5
+offset_left = -12.9784
+offset_top = -21.9197
+offset_right = 15.0216
+offset_bottom = -17.9197
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="Earth/Grapes"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Earth/Grapes/Area2D"]
+shape = SubResource("CircleShape2D_5umw0")
 
 [node name="SpaceCow" type="Sprite2D" parent="."]
 position = Vector2(300, 458)
@@ -821,6 +959,12 @@ sprite_frames = SubResource("SpriteFrames_5qisg")
 autoplay = "default"
 frame_progress = 0.311695
 
+[connection signal="area_entered" from="Earth/Corn/Area2D" to="Earth/Grapes" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Earth/Grapes2/Area2D" to="Earth/Grapes" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Earth/Rice2/Area2D" to="Earth/Grapes" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Earth/Rice/Area2D" to="Earth/Grapes" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Earth/Tomato/Area2D" to="Earth/Grapes" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Earth/Grapes/Area2D" to="Earth/Grapes" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="SpaceCow/Area2D" to="SpaceCow" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="SpaceGoat/Area2D" to="SpaceGoat" method="_on_area_2d_area_entered"]
 [connection signal="frame_changed" from="SpaceGoat/AnimatedSprite2D" to="SpaceGoat" method="_on_animated_sprite_2d_frame_changed"]

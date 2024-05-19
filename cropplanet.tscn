@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://scripts/Earth.gd" id="5_cexcv"]
 [ext_resource type="Texture2D" uid="uid://dff0jxpnyobae" path="res://assets/sprites/eggplant_idle_sprite.png" id="5_qknhu"]
 [ext_resource type="Texture2D" uid="uid://dxe5rogaspy87" path="res://assets/sprites/rice_idle_sprite.png" id="6_jxhci"]
-[ext_resource type="Script" path="res://Grapes.gd" id="6_mcycj"]
+[ext_resource type="Script" path="res://crops.gd" id="6_mcycj"]
 [ext_resource type="PackedScene" uid="uid://gap60trgfhpe" path="res://scenes/Healthbar.tscn" id="7_8fa0i"]
 [ext_resource type="Texture2D" uid="uid://jrtjv7snjpyy" path="res://assets/sprites/tomato_idle_sprite.png" id="7_bjjeb"]
 [ext_resource type="Script" path="res://scripts/SpaceCow.gd" id="7_d783q"]
