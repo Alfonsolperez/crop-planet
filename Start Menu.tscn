@@ -1,0 +1,298 @@
+[gd_scene load_steps=37 format=3 uid="uid://roshhcheop2c"]
+
+[ext_resource type="Script" path="res://Start Menu.gd" id="1_bq17w"]
+[ext_resource type="Texture2D" path="res://assets/TENTATIVE bg.png" id="2_63idy"]
+[ext_resource type="Texture2D" path="res://assets/Earth512.png" id="3_xg0mn"]
+[ext_resource type="Texture2D" path="res://assets/corn_idle_sprite.png" id="4_ekiq3"]
+[ext_resource type="Texture2D" path="res://assets/rice_idle_sprite.png" id="5_igf3q"]
+[ext_resource type="Texture2D" path="res://assets/eggplant_idle_sprite.png" id="6_5o1ru"]
+[ext_resource type="Texture2D" path="res://assets/tomato_idle_sprite.png" id="7_0qhil"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tfyfl"]
+font_size = 44
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n746j"]
+atlas = ExtResource("4_ekiq3")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dey8o"]
+atlas = ExtResource("4_ekiq3")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rv04"]
+atlas = ExtResource("4_ekiq3")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_el66p"]
+atlas = ExtResource("4_ekiq3")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2dx3w"]
+atlas = ExtResource("4_ekiq3")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0r7q7"]
+atlas = ExtResource("4_ekiq3")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqgsi"]
+atlas = ExtResource("4_ekiq3")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_spq21"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n746j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dey8o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rv04")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_el66p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2dx3w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0r7q7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqgsi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvy0n"]
+atlas = ExtResource("5_igf3q")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxxaf"]
+atlas = ExtResource("5_igf3q")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17w5m"]
+atlas = ExtResource("5_igf3q")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7a27a"]
+atlas = ExtResource("5_igf3q")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_032a2"]
+atlas = ExtResource("5_igf3q")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elvpw"]
+atlas = ExtResource("5_igf3q")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8r02n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvy0n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pxxaf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_17w5m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7a27a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_032a2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elvpw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6h1in"]
+atlas = ExtResource("6_5o1ru")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujasf"]
+atlas = ExtResource("6_5o1ru")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvljk"]
+atlas = ExtResource("6_5o1ru")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pi7cs"]
+atlas = ExtResource("6_5o1ru")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sihig"]
+atlas = ExtResource("6_5o1ru")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ryqpq"]
+atlas = ExtResource("6_5o1ru")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ex7yx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6h1in")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujasf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvljk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pi7cs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sihig")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ryqpq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4yec"]
+atlas = ExtResource("7_0qhil")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15ls1"]
+atlas = ExtResource("7_0qhil")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lyonj"]
+atlas = ExtResource("7_0qhil")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydiax"]
+atlas = ExtResource("7_0qhil")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbruw"]
+atlas = ExtResource("7_0qhil")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y3njd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4yec")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_15ls1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lyonj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydiax")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbruw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+script = ExtResource("1_bq17w")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -191.0
+offset_right = 277.0
+grow_vertical = 0
+
+[node name="StartBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../ExitBtn")
+text = "START"
+
+[node name="OptionsBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "OPTIONS"
+
+[node name="ExitBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../StartBtn")
+text = "EXIT"
+
+[node name="TentativeBg" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(579.233, 320.412)
+rotation = 1.5708
+scale = Vector2(0.604467, 0.602326)
+texture = ExtResource("2_63idy")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 84.0
+offset_right = 368.0
+offset_bottom = 145.0
+text = "CROP PLANET"
+label_settings = SubResource("LabelSettings_tfyfl")
+
+[node name="Earth" type="Sprite2D" parent="."]
+position = Vector2(787, 338)
+scale = Vector2(0.63, 0.63)
+texture = ExtResource("3_xg0mn")
+
+[node name="Corn" type="AnimatedSprite2D" parent="."]
+position = Vector2(993, 335)
+rotation = 1.5708
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_spq21")
+autoplay = "default"
+
+[node name="Rice" type="AnimatedSprite2D" parent="."]
+position = Vector2(597, 329)
+rotation = -1.5708
+scale = Vector2(3, 3.076)
+sprite_frames = SubResource("SpriteFrames_8r02n")
+autoplay = "default"
+
+[node name="Grapes" type="AnimatedSprite2D" parent="."]
+position = Vector2(789, 130)
+scale = Vector2(3.076, 3)
+sprite_frames = SubResource("SpriteFrames_ex7yx")
+autoplay = "default"
+
+[node name="Tomato" type="AnimatedSprite2D" parent="."]
+position = Vector2(785, 547)
+rotation = -3.14159
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_y3njd")
+autoplay = "default"
+
+[connection signal="pressed" from="VBoxContainer/StartBtn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/OptionsBtn" to="." method="_on_options_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/ExitBtn" to="." method="_on_exit_btn_pressed"]
