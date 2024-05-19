@@ -1,8 +1,25 @@
-[gd_scene load_steps=11 format=3 uid="uid://el6jsmmpibeo"]
+[gd_scene load_steps=13 format=3 uid="uid://el6jsmmpibeo"]
 
-[ext_resource type="Script" path="res://scripts/Options.gd" id="1_06aw2"]
 [ext_resource type="Texture2D" uid="uid://0cxbhjm8rfsi" path="res://assets/sprites/TENTATIVE bg.png" id="1_aq4ia"]
 [ext_resource type="Texture2D" uid="uid://dxe5rogaspy87" path="res://assets/sprites/rice_idle_sprite.png" id="2_su0wn"]
+[ext_resource type="Script" path="res://Rice.gd" id="3_ybphs"]
+
+[sub_resource type="GDScript" id="GDScript_nbg6a"]
+script/source = "extends Control
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+func _on_button_pressed():
+	get_tree().change_scene_to_file(\"res://scenes//Options.tscn\")
+"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gvy0n"]
 atlas = ExtResource("2_su0wn")
@@ -54,6 +71,20 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="GDScript" id="GDScript_doift"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
 [node name="Options" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -61,7 +92,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_06aw2")
+script = SubResource("GDScript_nbg6a")
 
 [node name="TentativeBg" type="Sprite2D" parent="."]
 position = Vector2(579.849, 327.526)
@@ -70,17 +101,19 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_aq4ia")
 
 [node name="Rice" type="AnimatedSprite2D" parent="."]
-position = Vector2(615, 316)
+position = Vector2(579, 335)
 scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_2d158")
 autoplay = "default"
+script = ExtResource("3_ybphs")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 512.0
-offset_top = 483.0
-offset_right = 736.0
-offset_bottom = 491.0
+offset_left = 466.0
+offset_top = 500.0
+offset_right = 690.0
+offset_bottom = 531.0
 text = "GO BACK"
+script = SubResource("GDScript_doift")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
