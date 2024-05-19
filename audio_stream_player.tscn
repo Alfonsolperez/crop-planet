@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://33cbg15lwqj1"]
+
+[ext_resource type="AudioStream" uid="uid://doa8br3cgs0dx" path="res://scenes/Finally_Raining.mp3" id="1_a8ssy"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_a8ssy")
+autoplay = true
