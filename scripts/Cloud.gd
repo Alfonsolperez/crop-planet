@@ -13,8 +13,7 @@ func _physics_process(delta):
 	spin(delta,input_axis)
 	
 func spin(delta,input_axis):
-	if speed != 0:
-		d += delta * input_axis
+	d += delta * input_axis
 	var viewport_center = get_viewport_rect().size / 2
 	position = viewport_center + Vector2( sin(d * speed) * radius, cos(d * speed) * radius)
 	var angle = atan2(viewport_center.y - position.y, viewport_center.x - position.x)
