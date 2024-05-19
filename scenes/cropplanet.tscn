@@ -1,4 +1,4 @@
-[gd_scene load_steps=127 format=3 uid="uid://dvc5ttfpotngu"]
+[gd_scene load_steps=128 format=3 uid="uid://dvc5ttfpotngu"]
 
 [ext_resource type="Script" path="res://scripts/Global.gd" id="1_uw66j"]
 [ext_resource type="Texture2D" uid="uid://dqfdwbdxf2i3k" path="res://assets/sprites/reverseearth_sprite (1).png" id="2_hr7hh"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://dwm6acu33fxo4" path="res://assets/sprites/powerup_block.png" id="22_5n6dw"]
 [ext_resource type="Script" path="res://scripts/PowerupBlock.gd" id="23_qb1kj"]
 [ext_resource type="Texture2D" uid="uid://pg58ga0ugd4p" path="res://assets/sprites/powerup_block_sprite.png" id="23_ycphd"]
+[ext_resource type="AudioStream" uid="uid://b3cixmbeaekqy" path="res://assets/damage_sfx.mp3" id="26_rw00m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qcpoo"]
 atlas = ExtResource("2_hr7hh")
@@ -959,12 +960,24 @@ sprite_frames = SubResource("SpriteFrames_5qisg")
 autoplay = "default"
 frame_progress = 0.311695
 
+<<<<<<< Updated upstream
 [connection signal="area_entered" from="Earth/Corn/Area2D" to="Earth/Corn" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Earth/Grapes2/Area2D" to="Earth/Grapes2" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Earth/Rice2/Area2D" to="Earth/Rice2" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Earth/Rice/Area2D" to="Earth/Rice" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Earth/Tomato/Area2D" to="Earth/Tomato" method="_on_area_2d_area_entered"]
+=======
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("26_rw00m")
+
+[connection signal="area_entered" from="Earth/Corn/Area2D" to="Earth/Grapes" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Earth/Grapes2/Area2D" to="Earth/Grapes" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Earth/Rice2/Area2D" to="Earth/Grapes" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Earth/Rice/Area2D" to="Earth/Grapes" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Earth/Tomato/Area2D" to="Earth/Grapes" method="_on_area_2d_area_entered"]
+>>>>>>> Stashed changes
 [connection signal="area_entered" from="Earth/Grapes/Area2D" to="Earth/Grapes" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="SpaceCow/Area2D" to="SpaceCow" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Cloud/Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="SpaceGoat/Area2D" to="SpaceGoat" method="_on_area_2d_area_entered"]
 [connection signal="frame_changed" from="SpaceGoat/AnimatedSprite2D" to="SpaceGoat" method="_on_animated_sprite_2d_frame_changed"]
