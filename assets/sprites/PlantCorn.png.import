@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqfdwbdxf2i3k"
-path="res://.godot/imported/reverseearth_sprite (1).png-5020a9b496140ead0d4edc560f8cecf1.ctex"
+uid="uid://mxgyynx0ymuw"
+path="res://.godot/imported/PlantCorn.png-6d1f705c2dbf288767e0a397d85e3cf4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/reverseearth_sprite (1).png"
-dest_files=["res://.godot/imported/reverseearth_sprite (1).png-5020a9b496140ead0d4edc560f8cecf1.ctex"]
+source_file="res://assets/sprites/PlantCorn.png"
+dest_files=["res://.godot/imported/PlantCorn.png-6d1f705c2dbf288767e0a397d85e3cf4.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://i4vmvc4q8whn"
-path="res://.godot/imported/cloud.png-656377b391351bd95f11dd6140b4ae2f.ctex"
+uid="uid://dpc08jpuu73mq"
+path="res://.godot/imported/PlantRice.png-3ef36e9af23b5cc5bf394ecab075211c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cloud/cloud.png"
-dest_files=["res://.godot/imported/cloud.png-656377b391351bd95f11dd6140b4ae2f.ctex"]
+source_file="res://assets/sprites/PlantRice.png"
+dest_files=["res://.godot/imported/PlantRice.png-3ef36e9af23b5cc5bf394ecab075211c.ctex"]
 
 [params]
 
