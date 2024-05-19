@@ -1,4 +1,4 @@
-[gd_scene load_steps=116 format=3 uid="uid://dvc5ttfpotngu"]
+[gd_scene load_steps=117 format=3 uid="uid://dvc5ttfpotngu"]
 
 [ext_resource type="Script" path="res://scripts/Global.gd" id="1_uw66j"]
 [ext_resource type="Texture2D" uid="uid://dqfdwbdxf2i3k" path="res://assets/sprites/reverseearth_sprite (1).png" id="2_hr7hh"]
@@ -155,6 +155,9 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5umw0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j4dqq"]
+size = Vector2(43.7078, 7.44416)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6h1in"]
 atlas = ExtResource("5_ixna8")
@@ -688,6 +691,13 @@ metadata/_edit_use_anchors_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Earth/Corn/Area2D"]
 shape = SubResource("CircleShape2D_5umw0")
 
+[node name="Area2D2" type="Area2D" parent="Earth/Corn"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Earth/Corn/Area2D2"]
+position = Vector2(2.66779, -26.7441)
+scale = Vector2(0.999999, 1)
+shape = SubResource("RectangleShape2D_j4dqq")
+
 [node name="Grapes2" type="AnimatedSprite2D" parent="Earth"]
 position = Vector2(185, 4.46057)
 rotation = 1.5708
@@ -708,6 +718,13 @@ metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Earth/Grapes2/Area2D"]
 shape = SubResource("CircleShape2D_5umw0")
+
+[node name="Area2D2" type="Area2D" parent="Earth/Grapes2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Earth/Grapes2/Area2D2"]
+position = Vector2(2.66779, -26.7441)
+scale = Vector2(0.999999, 1)
+shape = SubResource("RectangleShape2D_j4dqq")
 
 [node name="Rice2" type="AnimatedSprite2D" parent="Earth"]
 position = Vector2(92.5, 125.29)
@@ -730,6 +747,13 @@ metadata/_edit_use_anchors_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Earth/Rice2/Area2D"]
 shape = SubResource("CircleShape2D_5umw0")
 
+[node name="Area2D2" type="Area2D" parent="Earth/Rice2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Earth/Rice2/Area2D2"]
+position = Vector2(2.66779, -26.7441)
+scale = Vector2(0.999999, 1)
+shape = SubResource("RectangleShape2D_j4dqq")
+
 [node name="Rice" type="AnimatedSprite2D" parent="Earth"]
 position = Vector2(-167.5, 4.6404)
 rotation = -1.5708
@@ -750,6 +774,13 @@ metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Earth/Rice/Area2D"]
 shape = SubResource("CircleShape2D_5umw0")
+
+[node name="Area2D2" type="Area2D" parent="Earth/Rice"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Earth/Rice/Area2D2"]
+position = Vector2(2.66779, -26.7441)
+scale = Vector2(0.999999, 1)
+shape = SubResource("RectangleShape2D_j4dqq")
 
 [node name="Tomato" type="AnimatedSprite2D" parent="Earth"]
 position = Vector2(-85, 136.891)
@@ -772,6 +803,13 @@ metadata/_edit_use_anchors_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Earth/Tomato/Area2D"]
 shape = SubResource("CircleShape2D_5umw0")
 
+[node name="Area2D2" type="Area2D" parent="Earth/Tomato"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Earth/Tomato/Area2D2"]
+position = Vector2(2.66779, -26.7441)
+scale = Vector2(0.999999, 1)
+shape = SubResource("RectangleShape2D_j4dqq")
+
 [node name="Grapes" type="AnimatedSprite2D" parent="Earth"]
 position = Vector2(-92.5001, -143.852)
 rotation = -0.492463
@@ -792,6 +830,13 @@ metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Earth/Grapes/Area2D"]
 shape = SubResource("CircleShape2D_5umw0")
+
+[node name="Area2D2" type="Area2D" parent="Earth/Grapes"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Earth/Grapes/Area2D2"]
+position = Vector2(2.66779, -26.7441)
+scale = Vector2(0.999999, 1)
+shape = SubResource("RectangleShape2D_j4dqq")
 
 [node name="Healthbar" parent="Earth" instance=ExtResource("9_lwm56")]
 offset_left = -1395.0
@@ -883,11 +928,17 @@ autoplay = "default"
 frame_progress = 0.311695
 
 [connection signal="area_entered" from="Earth/Corn/Area2D" to="Earth/Corn" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Earth/Corn/Area2D2" to="Earth/Corn" method="_on_cloud_entered"]
 [connection signal="area_entered" from="Earth/Grapes2/Area2D" to="Earth/Grapes2" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Earth/Grapes2/Area2D2" to="Earth/Grapes2" method="_on_cloud_entered"]
 [connection signal="area_entered" from="Earth/Rice2/Area2D" to="Earth/Rice2" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Earth/Rice2/Area2D2" to="Earth/Rice2" method="_on_cloud_entered"]
 [connection signal="area_entered" from="Earth/Rice/Area2D" to="Earth/Rice" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Earth/Rice/Area2D2" to="Earth/Rice" method="_on_cloud_entered"]
 [connection signal="area_entered" from="Earth/Tomato/Area2D" to="Earth/Tomato" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Earth/Tomato/Area2D2" to="Earth/Tomato" method="_on_cloud_entered"]
 [connection signal="area_entered" from="Earth/Grapes/Area2D" to="Earth/Grapes" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Earth/Grapes/Area2D2" to="Earth/Grapes" method="_on_cloud_entered"]
 [connection signal="area_entered" from="Earth/Area2D" to="Earth" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="SpaceCow/Area2D" to="SpaceCow" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="SpaceGoat/Area2D" to="SpaceGoat" method="_on_area_2d_area_entered"]

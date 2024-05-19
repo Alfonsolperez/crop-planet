@@ -77,7 +77,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_snuw1"]
 size = Vector2(2674.46, 755.259)
 
-[node name="Cloud" type="Sprite2D"]
+[node name="Cloud" type="Sprite2D" groups=["cloud"]]
 position = Vector2(406, 150)
 scale = Vector2(0.0214062, 0.0218472)
 script = ExtResource("1_37k24")
@@ -89,7 +89,7 @@ sprite_frames = SubResource("SpriteFrames_thf7g")
 autoplay = "default"
 frame_progress = 0.579102
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["cloud"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(140.146, 6179.28)

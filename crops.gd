@@ -4,6 +4,7 @@ extends AnimatedSprite2D
 var health = 100
 var drain_rate = 2
 var wither_drain_rate = 6
+var heal_rate = 3
 
 func _ready():
 	healthbar.init_health(health)
@@ -28,3 +29,9 @@ func _on_area_2d_area_entered(area):
 		health -= 10
 	
 	healthbar.set_health(health)
+
+
+func _on_cloud_entered(area):
+	if area.is_in_group("cloud"):
+		health += heal_rate
+		healthbar.set_health(health)
