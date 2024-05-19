@@ -41,4 +41,3 @@ func spawn_at_random_side():
 func _on_area_2d_area_entered(area):
 	spawn_at_random_side()
 	Global.animalskilled += 1
-	
