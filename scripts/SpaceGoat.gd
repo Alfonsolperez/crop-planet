@@ -1,7 +1,9 @@
 extends Node2D
 
 var target_position := Vector2.ZERO
-var speed := 125.0
+var speed := 75.0
+var goatcharge = 1
+@onready var animated_sprite = $AnimatedSprite2D
 
 func _ready():
 	spawn_at_random_side()
@@ -37,7 +39,23 @@ func spawn_at_random_side():
 	
 	# Set the target position as the center of the screen
 	target_position = viewport_size / 2
+	animated_sprite.frame = 0
+	goatcharge = 1
+	
 	
 func _on_area_2d_area_entered(area):
 	spawn_at_random_side()
 	Global.animalskilled += 1
+	
+	
+
+
+func _on_animated_sprite_2d_frame_changed():
+	if goatcharge == 22:
+		goatcharge = 1
+	else: goatcharge += 1
+	
+	if 22 - (goatcharge) > 11:
+		speed = 75
+	else:
+		speed = 200
