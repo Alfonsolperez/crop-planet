@@ -10,6 +10,8 @@ func _ready():
 	
 func _process(delta):
 	hp_drain(delta)
+	if health <= 0:
+		queue_free() #ded
 
 func hp_drain(delta):
 	if health < 51:
@@ -26,6 +28,3 @@ func _on_area_2d_area_entered(area):
 		health -= 10
 	
 	healthbar.set_health(health)
-	
-	if health <= 0:
-		queue_free() #ded

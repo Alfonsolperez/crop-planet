@@ -959,11 +959,11 @@ sprite_frames = SubResource("SpriteFrames_5qisg")
 autoplay = "default"
 frame_progress = 0.311695
 
-[connection signal="area_entered" from="Earth/Corn/Area2D" to="Earth/Grapes" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Earth/Grapes2/Area2D" to="Earth/Grapes" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Earth/Rice2/Area2D" to="Earth/Grapes" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Earth/Rice/Area2D" to="Earth/Grapes" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Earth/Tomato/Area2D" to="Earth/Grapes" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Earth/Corn/Area2D" to="Earth/Corn" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Earth/Grapes2/Area2D" to="Earth/Grapes2" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Earth/Rice2/Area2D" to="Earth/Rice2" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Earth/Rice/Area2D" to="Earth/Rice" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Earth/Tomato/Area2D" to="Earth/Tomato" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Earth/Grapes/Area2D" to="Earth/Grapes" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="SpaceCow/Area2D" to="SpaceCow" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="SpaceGoat/Area2D" to="SpaceGoat" method="_on_area_2d_area_entered"]
