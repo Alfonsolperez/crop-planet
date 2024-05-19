@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://bjugkhf1xofuo" path="res://assets/sprites/spacegoat_charge_sprite.png" id="20_jtyhy"]
 [ext_resource type="Texture2D" uid="uid://0cxbhjm8rfsi" path="res://assets/sprites/TENTATIVE bg.png" id="21_21tf4"]
 [ext_resource type="Texture2D" uid="uid://dwm6acu33fxo4" path="res://assets/sprites/powerup_block.png" id="22_5n6dw"]
-[ext_resource type="Script" path="res://scenes/PowerupBlock.gd" id="23_qb1kj"]
+[ext_resource type="Script" path="res://scripts/PowerupBlock.gd" id="23_qb1kj"]
 [ext_resource type="Texture2D" uid="uid://pg58ga0ugd4p" path="res://assets/sprites/powerup_block_sprite.png" id="23_ycphd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qcpoo"]
