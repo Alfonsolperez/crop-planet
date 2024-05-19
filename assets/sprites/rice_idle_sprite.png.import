@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfee0mvq2un60"
-path="res://.godot/imported/PlantGrape.png-cbb17c6cb3390372ed5ca095575e8e42.ctex"
+uid="uid://dxe5rogaspy87"
+path="res://.godot/imported/rice_idle_sprite.png-c873529e681994c78a777c6254bff8a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PlantGrape.png"
-dest_files=["res://.godot/imported/PlantGrape.png-cbb17c6cb3390372ed5ca095575e8e42.ctex"]
+source_file="res://assets/sprites/rice_idle_sprite.png"
+dest_files=["res://.godot/imported/rice_idle_sprite.png-c873529e681994c78a777c6254bff8a6.ctex"]
 
 [params]
 

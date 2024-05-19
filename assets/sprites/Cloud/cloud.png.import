@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxs0ommtndij3"
-path="res://.godot/imported/spacegoat_windup_sprite.png-44776f9ba433fed0e7ef4c16ee55183d.ctex"
+uid="uid://i4vmvc4q8whn"
+path="res://.godot/imported/cloud.png-7f690722a433a5113de4f39e227378d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/spacegoat_windup_sprite.png"
-dest_files=["res://.godot/imported/spacegoat_windup_sprite.png-44776f9ba433fed0e7ef4c16ee55183d.ctex"]
+source_file="res://assets/sprites/Cloud/cloud.png"
+dest_files=["res://.godot/imported/cloud.png-7f690722a433a5113de4f39e227378d4.ctex"]
 
 [params]
 

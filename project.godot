@@ -11,12 +11,12 @@ config_version=5
 [application]
 
 config/name="Crop Planet"
-run/main_scene="res://Start Menu.tscn"
+run/main_scene="res://scenes/Start Menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 
 [autoload]
 
-Global="*res://Global.gd"
+Global="*res://scripts/Global.gd"
 
 [input]
 

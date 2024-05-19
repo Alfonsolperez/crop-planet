@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpc08jpuu73mq"
-path="res://.godot/imported/PlantRice.png-e0b82175333af7fc4857da46290d615e.ctex"
+uid="uid://l3hjiqc4rh8q"
+path="res://.godot/imported/SpaceGoat.png-4c3fc487a79aae217aa7baa90dcdc83e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PlantRice.png"
-dest_files=["res://.godot/imported/PlantRice.png-e0b82175333af7fc4857da46290d615e.ctex"]
+source_file="res://assets/sprites/SpaceGoat.png"
+dest_files=["res://.godot/imported/SpaceGoat.png-4c3fc487a79aae217aa7baa90dcdc83e.ctex"]
 
 [params]
 

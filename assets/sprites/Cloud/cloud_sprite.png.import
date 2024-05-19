@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dff0jxpnyobae"
-path="res://.godot/imported/eggplant_idle_sprite.png-56b53b258d4af53817acb914735b2777.ctex"
+uid="uid://dtljlsyxruxu0"
+path="res://.godot/imported/cloud_sprite.png-9f41db91edcae503b7461f03c2e8e426.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/eggplant_idle_sprite.png"
-dest_files=["res://.godot/imported/eggplant_idle_sprite.png-56b53b258d4af53817acb914735b2777.ctex"]
+source_file="res://assets/sprites/Cloud/cloud_sprite.png"
+dest_files=["res://.godot/imported/cloud_sprite.png-9f41db91edcae503b7461f03c2e8e426.ctex"]
 
 [params]
 
