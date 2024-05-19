@@ -1,4 +1,4 @@
-extends Control
+extends AnimatedSprite2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -8,8 +8,5 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
-
-
-func _on_button_pressed():
-	get_tree().change_scene_to_file("res://scripts//Start Menu.tscn") # Replace with function body.
+	var viewport_size = get_viewport_rect().size
+	self.position = viewport_size / 2
