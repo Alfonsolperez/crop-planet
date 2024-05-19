@@ -1,4 +1,4 @@
-[gd_scene load_steps=105 format=3 uid="uid://dvc5ttfpotngu"]
+[gd_scene load_steps=106 format=3 uid="uid://dvc5ttfpotngu"]
 
 [ext_resource type="Script" path="res://Global.gd" id="1_k5ogr"]
 [ext_resource type="Script" path="res://Earth.gd" id="5_cexcv"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" path="res://animalskilled.gd" id="10_i7ia0"]
 [ext_resource type="Script" path="res://Cloud.gd" id="11_00ysf"]
 [ext_resource type="Texture2D" uid="uid://i4vmvc4q8whn" path="res://assets/Cloud/cloud.png" id="11_3hpdo"]
+[ext_resource type="FontFile" uid="uid://by2tsy20lvxbi" path="res://assets/fonts/PixelOperator8.ttf" id="11_3mcws"]
 [ext_resource type="Texture2D" uid="uid://dbjgeunwulkd" path="res://assets/Cloud/cloud_rain_sprite.png" id="11_8qklr"]
 [ext_resource type="Texture2D" uid="uid://l3hjiqc4rh8q" path="res://assets/SpaceGoat.png" id="12_4mfbp"]
 [ext_resource type="Script" path="res://SpaceGoat.gd" id="13_g10yg"]
@@ -662,10 +663,12 @@ sprite_frames = SubResource("SpriteFrames_d3802")
 autoplay = "default"
 
 [node name="Score" type="Label" parent="."]
-offset_left = 1.0
-offset_top = 56.0
-offset_right = 251.0
-offset_bottom = 125.0
+offset_left = 18.0
+offset_top = 75.0
+offset_right = 338.0
+offset_bottom = 144.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_3mcws")
 theme_override_font_sizes/font_size = 50
 text = "Score: 0"
 script = ExtResource("9_e8vua")
@@ -675,8 +678,11 @@ process_callback = 0
 autostart = true
 
 [node name="animalskilled" type="Label" parent="."]
-offset_right = 204.0
-offset_bottom = 65.0
+offset_left = 13.0
+offset_top = 17.0
+offset_right = 657.0
+offset_bottom = 82.0
+theme_override_fonts/font = ExtResource("11_3mcws")
 theme_override_font_sizes/font_size = 50
 text = "Animals Killed: 0"
 script = ExtResource("10_i7ia0")
